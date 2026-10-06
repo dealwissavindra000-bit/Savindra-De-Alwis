@@ -14,7 +14,7 @@
         }
 
         header {
-            background: #linear-gradient(135deg, #0b1f3a, #1769aa);
+            background: linear-gradient(135deg, #0b1f3a, #1769aa);
             color: white;
             text-align: center;
             padding: 80px 20px;
@@ -57,6 +57,8 @@
             font-size: 32px;
             margin-bottom: 20px;
             color: #0b1f3a;
+            border-bottom: 3px solid #1769aa;
+            padding-bottom: 10px;
         }
 
         .card {
@@ -64,7 +66,9 @@
             padding: 25px;
             margin: 20px 0;
             border-radius: 12px;
-        }
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
         
         .card ul {
             padding-left: 25px;
