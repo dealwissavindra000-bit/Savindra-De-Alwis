@@ -144,8 +144,168 @@
             text-align: center;
             padding: 30px;
         }
+
+        /* Hero Layout */
+
+.hero {
+    padding: 90px 40px;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            text-align: left;
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: 21px;
+            margin-top: 15px;
+        }
+
+        /* Data Visual */
+
+        .data-visual {
+            flex: 0 0 330px;
+            display: flex;
+            justify-content: center;
+            animation: floatDashboard 4s ease-in-out infinite;
+        }
+
+        .dashboard-card {
+            width: 300px;
+            height: 220px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .chart-header {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .chart-header span {
+            width: 7px;
+            height: 7px;
+            background: #1769aa;
+            border-radius: 50%;
+        }
+
+        .chart-area {
+            height: 100px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 14px;
+            border-bottom: 1px solid #d9e2ec;
+        }
+
+        .bar {
+            width: 28px;
+            background: #1769aa;
+            border-radius: 5px 5px 0 0;
+            animation: barPulse 3s ease-in-out infinite;
+        }
+
+        .bar-1 {
+            height: 45px;
+        }
+
+        .bar-2 {
+            height: 70px;
+        }
+
+        .bar-3 {
+            height: 55px;
+        }
+
+        .bar-4 {
+            height: 90px;
+        }
+
+        .bar-5 {
+            height: 75px;
+        }
+
+        .data-line {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 18px;
+        }
+
+        .data-line span {
+            width: 45px;
+            height: 6px;
+            background: #dceeff;
+            border-radius: 5px;
+        }
+
+        .dashboard-footer {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .dashboard-footer div {
+            height: 8px;
+            background: #dceeff;
+            border-radius: 5px;
+        }
+
+        .dashboard-footer div:nth-child(1) {
+            width: 80px;
+        }
+
+        .dashboard-footer div:nth-child(2) {
+            width: 55px;
+        }
+
+        .dashboard-footer div:nth-child(3) {
+            width: 35px;
+        }
+
+        @keyframes floatDashboard {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes barPulse {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(1.05);
+            }
+        }
+
     </style>
 </head>
+
 
 <body>
 
@@ -155,6 +315,41 @@
         <p>Learning. Building. Growing.</p>
         
         <a href="#about" class="hero-button">Explore My Journey ↓</a>
+         </div>
+
+        <div class="data-visual">
+            <div class="dashboard-card">
+
+                <div class="chart-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="chart-area">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                    <div class="bar bar-4"></div>
+                    <div class="bar bar-5"></div>
+                </div>
+
+                <div class="data-line">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="dashboard-footer">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     </header>
 
     <nav>
