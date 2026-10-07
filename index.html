@@ -403,7 +403,86 @@
 
 }
 
+.journey-timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding-left: 45px;
+}
 
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background: #1769aa;
+    border-radius: 5px;
+}
+
+.journey-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.journey-item:last-child {
+    margin-bottom: 0;
+}
+
+.journey-dot {
+    position: absolute;
+    left: -38px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    background: #1769aa;
+    border: 4px solid #e8eef5;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.journey-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e1e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.journey-year {
+    display: inline-block;
+    color: #1769aa;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.journey-card h3 {
+    margin: 0 0 6px;
+    color: #0b1f3a;
+    font-size: 22px;
+}
+
+.journey-card h4 {
+    margin: 0 0 12px;
+    color: #555;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.journey-card p {
+    margin: 0;
+    line-height: 1.7;
+    max-width: 750px;
+}
+        
     </style>
 </head>
 
@@ -544,85 +623,55 @@
     </div>
 </section>
 
-.journey-timeline {
-    position: relative;
-    max-width: 850px;
-    margin: 40px auto 0;
-    padding-left: 45px;
-}
+    <section id="journey">
+    <h2>🚀 My Journey</h2>
 
-.journey-timeline::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    bottom: 10px;
-    width: 3px;
-    background: #1769aa;
-    border-radius: 5px;
-}
+    <div class="journey-timeline">
 
-.journey-item {
-    position: relative;
-    margin-bottom: 35px;
-}
+        <div class="journey-item">
+            <div class="journey-dot"></div>
 
-.journey-item:last-child {
-    margin-bottom: 0;
-}
+            <div class="journey-card">
+                <span class="journey-year">2012–2023</span>
+                <h3>School Foundation</h3>
+                <h4>S. Thomas' Preparatory School, Kollupitiya</h4>
+                <p>
+                    Built a strong foundation through academics, extracurricular activities,
+                    and leadership opportunities as a school prefect.
+                </p>
+            </div>
+        </div>
 
-.journey-dot {
-    position: absolute;
-    left: -38px;
-    top: 28px;
-    width: 14px;
-    height: 14px;
-    background: #1769aa;
-    border: 4px solid #e8eef5;
-    border-radius: 50%;
-    z-index: 2;
-}
+        <div class="journey-item">
+            <div class="journey-dot"></div>
 
-.journey-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #e1e8f0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+            <div class="journey-card">
+                <span class="journey-year">2023–2025</span>
+                <h3>Advanced Level</h3>
+                <h4>S. Thomas' College, Mount Lavinia</h4>
+                <p>
+                    Completed my Advanced Level education, gaining knowledge in Economics,
+                    Mathematics, and Business Studies.
+                </p>
+            </div>
+        </div>
 
-.journey-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
+        <div class="journey-item">
+            <div class="journey-dot"></div>
 
-.journey-year {
-    display: inline-block;
-    color: #1769aa;
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
+            <div class="journey-card">
+                <span class="journey-year">2026–Present</span>
+                <h3>Undergraduate Studies</h3>
+                <h4>University of Westminster (IIT)</h4>
+                <p>
+                    Currently pursuing my undergraduate degree while continuing to explore
+                    how data can be used to understand and support business decisions.
+                </p>
+            </div>
+        </div>
 
-.journey-card h3 {
-    margin: 0 0 6px;
-    color: #0b1f3a;
-    font-size: 22px;
-}
-
-.journey-card h4 {
-    margin: 0 0 12px;
-    color: #555;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-.journey-card p {
-    margin: 0;
-    line-height: 1.7;
-    max-width: 750px;
-}
+    </div>
+</section>
 
   <section id="contact">
     <h2>✉️Contact Me</h2>
