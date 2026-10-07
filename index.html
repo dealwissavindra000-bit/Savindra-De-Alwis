@@ -114,6 +114,8 @@
             line-height: 1.8;
         }
 
+
+        
         .card + .card {
                 margin-top: 25px;
         }
@@ -122,6 +124,55 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
+
+        /* Extracurricular Activities */
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.activity-card {
+    background: white;
+    padding: 30px;
+    min-height: 190px;
+    border-radius: 16px;
+    border: 1px solid #e1e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.activity-card.active {
+    transform: scale(1.06);
+    border-color: #1769aa;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.activity-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.activity-years {
+    color: #1769aa;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.activity-card h3 {
+    margin: 8px 0;
+    color: #0b1f3a;
+    font-size: 23px;
+}
+
+.activity-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
 
         .contact-buttons {
             display: flex;
@@ -600,15 +651,40 @@
 
 
 <section id="extracurricular">
-    <h2>🏏 Extracurricular Activities</h2>
+    <h2>🏃 Extracurricular Activities</h2>
 
-    <div class="card">
-        <ul>
-            <li>Cricket – S. Thomas' Preparatory School, Kollupitiya</li>
-            <li>Swimming – S. Thomas' Preparatory School, Kollupitiya</li>
-            <li>Cadetting – S. Thomas' Preparatory School, Kollupitiya</li>
-            <li>Boxing – S. Thomas' College, Mount Lavinia</li>
-        </ul>
+    <p class="section-subtitle">Lessons learned beyond the classroom.</p>
+
+    <div class="activities-grid">
+
+        <div class="activity-card" onclick="toggleActivity(this)">
+            <div class="activity-icon">🏏</div>
+            <span class="activity-years">2017–2022</span>
+            <h3>Cricket</h3>
+            <p>S. Thomas' Preparatory School, Kollupitiya</p>
+        </div>
+
+        <div class="activity-card" onclick="toggleActivity(this)">
+            <div class="activity-icon">🏊</div>
+            <span class="activity-years">2017–2022</span>
+            <h3>Swimming</h3>
+            <p>S. Thomas' Preparatory School, Kollupitiya</p>
+        </div>
+
+        <div class="activity-card" onclick="toggleActivity(this)">
+            <div class="activity-icon">🎖️</div>
+            <span class="activity-years">2021–2022</span>
+            <h3>Cadetting</h3>
+            <p>S. Thomas' Preparatory School, Kollupitiya</p>
+        </div>
+
+        <div class="activity-card" onclick="toggleActivity(this)">
+            <div class="activity-icon">🥊</div>
+            <span class="activity-years">2023–2024</span>
+            <h3>Boxing</h3>
+            <p>S. Thomas' College, Mount Lavinia</p>
+        </div>
+
     </div>
 </section>
     <section id="projects">
@@ -701,6 +777,20 @@
     <footer>
         <p>© 2026 Savindra De Alwis. </p>
     </footer>
+
+    <script>
+        function toggleActivity(card) {
+            const isActive = card.classList.contains("active");
+
+            document.querySelectorAll(".activity-card").forEach(function(item) {
+                item.classList.remove("active");
+            });
+
+            if (!isActive) {
+                card.classList.add("active");
+            }
+        }
+    </script>
 
 </body>
 </html>
