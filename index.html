@@ -97,6 +97,27 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+        .card h3 {
+                margin-top: 0;
+                margin-bottom: 15px;
+                color: #0b1f3a;
+        }
+
+        .card p {
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        .card ul {
+            padding-left: 22px;
+            line-height: 1.8;
+        }
+
+        .card + .card {
+                margin-top: 25px;
+        }
+        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
@@ -354,6 +375,10 @@
 
      section {
         padding: 60px 20px;
+    }
+
+    .card {
+        padding: 20px;
     }
 
 }
