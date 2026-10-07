@@ -145,6 +145,12 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.activity-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    border-color: #1769aa;
+}
+
 .activity-card.active {
     transform: scale(1.06);
     border-color: #1769aa;
@@ -653,7 +659,9 @@
 <section id="extracurricular">
     <h2>🏃 Extracurricular Activities</h2>
 
-    <p class="section-subtitle">Lessons learned beyond the classroom.</p>
+    <div class="section-subtitle">
+        “Lessons learned beyond the classroom.”
+    </div>
 
     <div class="activities-grid">
 
