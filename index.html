@@ -239,6 +239,36 @@
     text-align: center;
     padding: 30px;
 }
+        .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.footer-content p {
+    margin: 0 0 15px;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #222222;
+}
 
         /* Hero Layout */
 
@@ -691,9 +721,22 @@
     </div>
 </section> 
 
-    <footer>
-        <p>© 2026 Savindra De Alwis. </p>
-    </footer>
+   <footer>
+    <div class="footer-content">
+
+        <p>© 2026 Savindra De Alwis.</p>
+
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#currently">Currently</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#extracurricular">Extracurricular</a>
+            <a href="#projects">Projects</a>
+            <a href="#journey">Journey</a>
+        </div>
+
+    </div>
+</footer>
 
    <script>
 function toggleActivity(card) {
