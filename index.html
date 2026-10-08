@@ -355,7 +355,18 @@ footer {
 }
 
        
- .skills-grid {
+.skills-category {
+    margin: 35px 0 20px;
+    color: #222222;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.skills-category:first-of-type {
+    margin-top: 0;
+}
+
+.skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
@@ -383,22 +394,6 @@ footer {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
 }
 
-.skill-card:nth-child(1).active {
-    transform: translateX(-45px) scale(1.06);
-}
-
-.skill-card:nth-child(2).active {
-    transform: translateX(45px) scale(1.06);
-}
-
-.skill-card:nth-child(3).active {
-    transform: translateX(-45px) scale(1.06);
-}
-
-.skill-card:nth-child(4).active {
-    transform: translateX(45px) scale(1.06);
-}
-
 .skill-card h3 {
     margin: 0 0 12px;
     color: #222222;
@@ -409,7 +404,40 @@ footer {
     margin: 0;
     color: #555;
     line-height: 1.7;
-}       
+}
+
+/* Center the third card in each category */
+.skills-grid .skill-card:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 12.5px);
+}
+
+/* Technical Skills movement */
+.skills-grid:first-of-type .skill-card:nth-child(1).active {
+    transform: translateX(-45px) scale(1.06);
+}
+
+.skills-grid:first-of-type .skill-card:nth-child(2).active {
+    transform: translateX(45px) scale(1.06);
+}
+
+.skills-grid:first-of-type .skill-card:nth-child(3).active {
+    transform: translateX(-45px) scale(1.06);
+}
+
+/* Core Strengths movement */
+.skills-grid:last-of-type .skill-card:nth-child(1).active {
+    transform: translateX(-45px) scale(1.06);
+}
+
+.skills-grid:last-of-type .skill-card:nth-child(2).active {
+    transform: translateX(45px) scale(1.06);
+}
+
+.skills-grid:last-of-type .skill-card:nth-child(3).active {
+    transform: translateX(45px) scale(1.06);
+}
 
         /* Mobile Hero */
 
@@ -472,9 +500,19 @@ footer {
     }
 
      .skills-grid {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
+}
 
+.skills-grid .skill-card:nth-child(3) {
+    grid-column: auto;
+    width: auto;
+}
+
+.skill-card:nth-child(1).active,
+.skill-card:nth-child(2).active,
+.skill-card:nth-child(3).active {
+    transform: scale(1.03);
+}
   
 
 .journey-timeline {
@@ -646,9 +684,10 @@ footer {
 
     </div>
 </section>
-
-    <section id="skills">
+<section id="skills">
     <h2>🎯 Skills</h2>
+
+    <h3 class="skills-category">Technical Skills (Learning)</h3>
 
     <div class="skills-grid">
 
@@ -663,6 +702,17 @@ footer {
         </div>
 
         <div class="skill-card" onclick="toggleSkill(this)">
+            <h3>📉 Statistical Analysis & R</h3>
+            <p>Developing skills in statistical analysis and using R to analyse and interpret data.</p>
+        </div>
+
+    </div>
+
+    <h3 class="skills-category">Core Strengths</h3>
+
+    <div class="skills-grid">
+
+        <div class="skill-card" onclick="toggleSkill(this)">
             <h3>🤝 Teamwork</h3>
             <p>Developed through team-based experiences in cricket, cadetting, and other extracurricular activities.</p>
         </div>
@@ -672,9 +722,13 @@ footer {
             <p>Developed through my experience as a School Prefect, communicating ideas clearly and working effectively with others.</p>
         </div>
 
+        <div class="skill-card" onclick="toggleSkill(this)">
+            <h3>📋 Organisational Skills</h3>
+            <p>Developing the ability to manage tasks, priorities, deadlines, and responsibilities effectively.</p>
+        </div>
+
     </div>
 </section>
-
   <section id="achievements">
     <h2>🏆 Achievements</h2>
 
