@@ -355,7 +355,46 @@ footer {
 }
 
        
-        
+ .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.skill-card {
+    background: white;
+    padding: 30px;
+    min-height: 170px;
+    border-radius: 16px;
+    border: 1px solid #e1e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    border-color: #e8751a;
+}
+
+.skill-card.active {
+    transform: scale(1.05);
+    border-color: #e8751a;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.skill-card h3 {
+    margin: 0 0 12px;
+    color: #222222;
+    font-size: 22px;
+}
+
+.skill-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+}       
 
         /* Mobile Hero */
 
@@ -399,6 +438,7 @@ footer {
         font-size: 18px;
     }
 
+
     .data-visual {
         flex: none;
         width: 100%;
@@ -416,7 +456,11 @@ footer {
         grid-template-columns: 1fr;
     }
 
-}
+     .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+  
 
 .journey-timeline {
     position: relative;
@@ -780,7 +824,7 @@ footer {
     </div>
 </footer>
 
-   <script>
+  <script>
 function toggleActivity(card) {
     const isActive = card.classList.contains("active");
 
@@ -799,6 +843,20 @@ function toggleJourney(card) {
     const isActive = card.classList.contains("active");
 
     document.querySelectorAll(".journey-card").forEach(function(item) {
+        item.classList.remove("active");
+    });
+
+    if (!isActive) {
+        card.classList.add("active");
+    }
+}
+</script>
+
+<script>
+function toggleSkill(card) {
+    const isActive = card.classList.contains("active");
+
+    document.querySelectorAll(".skill-card").forEach(function(item) {
         item.classList.remove("active");
     });
 
