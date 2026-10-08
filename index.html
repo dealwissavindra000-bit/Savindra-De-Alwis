@@ -404,12 +404,19 @@
     border-radius: 12px;
     border: 1px solid #e1e8f0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .journey-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.journey-card.active {
+    transform: scale(1.05);
+    border-color: #e8751a;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
 }
 
 .journey-year {
@@ -605,7 +612,7 @@
         <div class="journey-item">
             <div class="journey-dot"></div>
 
-            <div class="journey-card">
+            <div class="journey-card" onclick="toggleJourney(this)">
                 <span class="journey-year">2012–2023</span>
                 <h3>School Foundation</h3>
                 <h4>S. Thomas' Preparatory School, Kollupitiya</h4>
@@ -676,19 +683,30 @@
         <p>© 2026 Savindra De Alwis. </p>
     </footer>
 
-    <script>
-        function toggleActivity(card) {
-            const isActive = card.classList.contains("active");
+   <script>
+function toggleActivity(card) {
+    const isActive = card.classList.contains("active");
 
-            document.querySelectorAll(".activity-card").forEach(function(item) {
-                item.classList.remove("active");
-            });
+    document.querySelectorAll(".activity-card").forEach(function(item) {
+        item.classList.remove("active");
+    });
 
-            if (!isActive) {
-                card.classList.add("active");
-            }
-        }
-    </script>
+    if (!isActive) {
+        card.classList.add("active");
+    }
+}
+</script>
 
-</body>
-</html>
+<script>
+function toggleJourney(card) {
+    const isActive = card.classList.contains("active");
+
+    document.querySelectorAll(".journey-card").forEach(function(item) {
+        item.classList.remove("active");
+    });
+
+    if (!isActive) {
+        card.classList.add("active");
+    }
+}
+</script>
