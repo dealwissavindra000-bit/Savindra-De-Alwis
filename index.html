@@ -379,9 +379,24 @@ footer {
 }
 
 .skill-card.active {
-    transform: scale(1.05);
     border-color: #e8751a;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.skill-card:nth-child(1).active {
+    transform: translate(-35px, -18px) scale(1.04);
+}
+
+.skill-card:nth-child(2).active {
+    transform: translate(35px, -18px) scale(1.04);
+}
+
+.skill-card:nth-child(3).active {
+    transform: translate(-35px, 18px) scale(1.04);
+}
+
+.skill-card:nth-child(4).active {
+    transform: translate(35px, 18px) scale(1.04);
 }
 
 .skill-card h3 {
