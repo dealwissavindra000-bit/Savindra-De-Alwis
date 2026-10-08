@@ -262,16 +262,28 @@
             padding-left: 100px;
         }
 
-        .hero-text h1 {
-            font-size: 55px;
-            margin: 0;
-            color: #222222;
-        }
+      .hero-text h1 {
+    font-size: 55px;
+    margin: 0;
+    color: #222222;
+    position: relative;
+}
+
+.hero-text h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #e8751a;
+    margin-top: 12px;
+    border-radius: 5px;
+}
 
         .hero-text p {
             font-size: 21px;
             margin-top: 15px;
-            color: #555555;
+            color: #e8751a;
+            font-weight: 600;
         }
 
         /* Data Visual */
