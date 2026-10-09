@@ -1087,3 +1087,47 @@ function toggleSkill(card) {
     }
 }
 </script>
+
+<script>
+(function () {
+    const hero = document.querySelector(".hero");
+    const heroText = document.querySelector(".hero-text");
+
+    if (!hero || !heroText) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    let ticking = false;
+
+    function updateHeroFade() {
+        const fadeDistance = Math.max(320, hero.offsetHeight * 0.75);
+
+        const progress = Math.min(
+            Math.max(window.scrollY / fadeDistance, 0),
+            1
+        );
+
+        heroText.style.opacity = 1 - progress;
+        heroText.style.transform =
+            `translateY(${-20 * progress}px)`;
+
+        heroText.style.pointerEvents =
+            progress >= 0.98 ? "none" : "";
+
+        ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeroFade);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    window.addEventListener("resize", updateHeroFade);
+
+    updateHeroFade();
+})();
+</script>
