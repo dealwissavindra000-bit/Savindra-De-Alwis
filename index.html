@@ -684,6 +684,66 @@ footer {
     line-height: 1.7;
     max-width: 750px;
 }
+
+/* Restore the original mobile hero layout */
+@media (max-width: 700px) {
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        flex: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-text .hero-button {
+        margin: 12px 6px 0 !important;
+    }
+
+    .data-visual {
+        flex: none;
+        width: 100%;
+        max-width: 320px;
+        margin: 0;
+        padding: 0;
+        position: static;
+        right: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-photo {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        max-height: 340px;
+        object-fit: cover;
+    }
+}
+
+/* Keep all tagline words black on desktop and mobile */
+.hero-tagline .tagline-word {
+    color: #222222 !important;
+}
         
     </style>
 </head>
@@ -691,58 +751,45 @@ footer {
 
 <body>
 
-   <header class="hero">
-    <div class="hero-text">
+ <header class="hero">
+    <div class="hero-content">
 
-    <h1 class="hero-name">Savindra De Alwis</h1>
+        <div class="hero-text">
+            <h1 class="hero-name">Savindra De Alwis</h1>
 
-    <p class="hero-degree">
-        Business Data Analytics Undergraduate
-    </p>
+            <p class="hero-degree">
+                Business Data Analytics Undergraduate
+            </p>
 
-    <p class="hero-tagline">
-        <span class="tagline-word">Learning.</span>
-        <span class="tagline-word">Building.</span>
-        <span class="tagline-word">Growing.</span>
-    </p>
+            <p class="hero-tagline">
+                <span class="tagline-word">Learning.</span>
+                <span class="tagline-word">Building.</span>
+                <span class="tagline-word">Growing.</span>
+            </p>
 
-    <a href="#about" class="hero-button">
-        Explore My Journey ↓
-    </a>
+            <a href="#about" class="hero-button">
+                Explore My Journey ↓
+            </a>
 
-    <a href="CV%20-%20Savindra%20De%20Alwis.pdf"
-       target="_blank"
-       class="hero-button"
-       style="margin-left: 10px;">
-        View CV ↗
-    </a>
-
-</div>
-
-       <div class="data-visual">
-    <img src="WhatsApp Image 2026-10-08 at 12.16.22 AM.jpeg"
-         alt="Savindra De Alwis"
-         class="profile-photo">
-</div>
-
-
-                <div class="data-line">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <div class="dashboard-footer">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-            </div>
+            <a href="CV - Savindra De Alwis(1).pdf"
+               target="_blank"
+               class="hero-button"
+               style="margin-left: 10px;">
+                View CV ↗
+            </a>
         </div>
+
+        <div class="data-visual">
+            <img src="WhatsApp Image 2026-10-08 at 12.16.22 AM.jpeg"
+                 alt="Savindra De Alwis"
+                 class="profile-photo">
+        </div>
+
     </div>
-    </header>
+</header>
+
+
+               
 
    <nav>
     <a href="#about">About</a>
