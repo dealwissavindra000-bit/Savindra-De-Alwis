@@ -885,10 +885,10 @@ footer {
     <a href="#currently">Currently</a>
     <a href="#skills">Skills</a>
     <a href="#achievements">Achievements</a>
+    <a href="#extracurricular">Extracurricular</a>
     <a href="#projects">Projects</a>
     <a href="#journey">Journey</a>
-    <a href="#extracurricular">Extracurricular</a>
-  </nav>
+</nav>
 
     <section id="about">
         <h2>👋About Me </h2>
@@ -1120,14 +1120,14 @@ footer {
     <div class="footer-content">
 
         <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#currently">Currently</a>
-            <a href="#skills">Skills</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#projects">Projects</a>
-            <a href="#journey">Journey</a>
-            <a href="#extracurricular">Extracurricular</a>
-        </div>
+    <a href="#about">About</a>
+    <a href="#currently">Currently</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#extracurricular">Extracurricular</a>
+    <a href="#projects">Projects</a>
+    <a href="#journey">Journey</a>
+</div>
 
         <div class="footer-bottom">
 
