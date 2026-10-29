@@ -899,9 +899,40 @@ h2 {
 }
 
  
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-       
-        
+.school-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.education-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.education-details h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .education-card {
+        gap: 12px;
+    }
+
+    .school-logo {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+   
     </style>
 </head>
 
@@ -1031,25 +1062,41 @@ h2 {
 
     </div>
 </section>
-  <section id="education">
+ 
+<section id="education">
     <h2>🎓 Education</h2>
 
-    <div class="card">
-        <h3>S. Thomas' College, Mount Lavinia (2023–2025)</h3>
-        <p>Pearson Edexcel International Advanced Level:</p>
+    <div class="card education-card">
+        <img
+            src="images/STC-Current-Crest-2012.jpg"
+            alt="S. Thomas' College crest"
+            class="school-logo"
+        >
 
-        <ul>
-            <li>Mathematics</li>
-            <li>Economics</li>
-            <li>Business Studies</li>
-        </ul>
+        <div class="education-details">
+            <h3>S. Thomas' College, Mount Lavinia (2023–2025)</h3>
+            <p>Pearson Edexcel International Advanced Level:</p>
+
+            <ul>
+                <li>Mathematics</li>
+                <li>Economics</li>
+                <li>Business Studies</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>S. Thomas' Preparatory School, Kollupitiya (2012–2023)</h3>
-        <p>G.C.E. Ordinary Level.</p>
+    <div class="card education-card">
+        <img
+            src="images/images.png"
+            alt="S. Thomas' Preparatory School crest"
+            class="school-logo"
+        >
 
-        <p>School Prefect – 2022</p>
+        <div class="education-details">
+            <h3>S. Thomas' Preparatory School, Kollupitiya (2012–2023)</h3>
+            <p>G.C.E. Ordinary Level.</p>
+            <p>School Prefect – 2022</p>
+        </div>
     </div>
 </section>
 
