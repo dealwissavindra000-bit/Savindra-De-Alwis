@@ -836,6 +836,68 @@ footer {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+
+/* ===== Visual consistency improvements ===== */
+
+/* Improve readability and scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+/* Give the page a subtle, warm background */
+body {
+    background-color: #fbf8f4;
+    line-height: 1.65;
+}
+
+/* Add consistent spacing and keep content centred */
+section {
+    box-sizing: border-box;
+    max-width: 1080px;
+    padding: 56px 32px;
+}
+
+/* Create gentle visual separation between sections */
+section:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+/* Make section headings more consistent */
+h2 {
+    letter-spacing: -0.4px;
+    margin-bottom: 26px;
+}
+
+/* Use subtle borders and shadows for existing cards */
+.card,
+.skill-card,
+.activity-card,
+.journey-card {
+    border-color: #eadfd4;
+    box-shadow: 0 6px 18px rgba(54, 39, 25, 0.06);
+}
+
+/* Keep hover feedback subtle */
+.card:hover,
+.skill-card:hover,
+.activity-card:hover,
+.journey-card:hover {
+    box-shadow: 0 10px 24px rgba(54, 39, 25, 0.10);
+}
+
+/* Improve spacing on smaller screens */
+@media (max-width: 700px) {
+    section {
+        padding: 42px 20px;
+    }
+
+    h2 {
+        margin-bottom: 22px;
+    }
+}
+
         
     </style>
 </head>
