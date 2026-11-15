@@ -1071,7 +1071,6 @@ h2 {
     <a href="#education">Education</a>
     <a href="#extracurricular">Extracurricular</a>
     <a href="#projects">Projects</a>
-    <a href="#journey">Journey</a>
 </nav>
 
     <section id="about">
@@ -1272,54 +1271,7 @@ h2 {
 </section>
 
 
-    <section id="journey">
-    <h2>🚀 My Journey</h2>
 
-    <div class="journey-timeline">
-
-        <div class="journey-item">
-            <div class="journey-dot"></div>
-
-            <div class="journey-card" onclick="toggleJourney(this)">
-                <span class="journey-year">2012–2023</span>
-                <h3>School Foundation</h3>
-                <h4>S. Thomas' Preparatory School, Kollupitiya</h4>
-                <p>
-                    Built a strong foundation through academics, extracurricular activities
-                    and leadership opportunities as a school prefect.
-                </p>
-            </div>
-        </div>
-
-        <div class="journey-item">
-            <div class="journey-dot"></div>
-
-            <div class="journey-card" onclick="toggleJourney(this)">
-                <span class="journey-year">2023–2025</span>
-                <h3>Advanced Level</h3>
-                <h4>S. Thomas' College, Mount Lavinia</h4>
-                <p>
-                    Completed my Advanced Level education, gaining knowledge in Economics,
-                    Mathematics, and Business Studies.
-                </p>
-            </div>
-        </div>
-
-        <div class="journey-item">
-            <div class="journey-dot"></div>
-
-            <div class="journey-card" onclick="toggleJourney(this)">
-                <span class="journey-year">2026–Present</span>
-                <h3>Undergraduate Studies</h3>
-                <h4>University of Westminster (IIT)</h4>
-                <p> Currently pursuing a BSc (Hons) Business Data Analytics degree while continuing to explore
-                    how data can be used to understand and support business decisions.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
 
   <section id="contact">
     <h2>📩 Contact Me</h2>
@@ -1356,7 +1308,6 @@ h2 {
     <a href="#education">Education</a>
     <a href="#extracurricular">Extracurricular</a>
     <a href="#projects">Projects</a>
-    <a href="#journey">Journey</a>
 </div>
 
         <div class="footer-bottom">
@@ -1400,19 +1351,7 @@ function toggleActivity(card) {
 }
 </script>
 
-<script>
-function toggleJourney(card) {
-    const isActive = card.classList.contains("active");
 
-    document.querySelectorAll(".journey-card").forEach(function(item) {
-        item.classList.remove("active");
-    });
-
-    if (!isActive) {
-        card.classList.add("active");
-    }
-}
-</script>
 
 <script>
 function toggleSkill(card) {
