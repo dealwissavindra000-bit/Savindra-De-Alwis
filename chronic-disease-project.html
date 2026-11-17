@@ -116,6 +116,48 @@ footer {
 }
 
 
+/* Dashboard Features */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.feature-item {
+    background: #fff1e3;
+    padding: 18px;
+    border-left: 3px solid #e8751a;
+    border-radius: 9px;
+}
+
+
+.feature-item strong {
+    display: block;
+    color: #263b63;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+
+.feature-item p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
         @media (max-width: 600px) {
             header h1 {
                 font-size: 29px;
@@ -357,22 +399,45 @@ footer {
         </section>
 
         
-        <section class="card">
-            <h2>Dashboard Features</h2>
-            <ul>
-                <li><strong>Interactive Slicers:</strong> State, year, value type and indicator filters for exploring the dashboard data.</li>
+        
+<section class="card dashboard-features">
+    <h2>Dashboard Features</h2>
 
-                <li><strong>Key Performance Indicators (KPIs):</strong> Overall adult rate, highest-rate area, lowest-rate area, highest-rate ethnic group and lowest-rate ethnic group.</li>
+    <div class="feature-grid">
 
-                <li><strong>Geographical Visualisation:</strong> Shape Map displaying health indicator values across U.S. states.</li>
+        <div class="feature-item">
+            <strong>Interactive Slicers</strong>
+            <p>State, year, value type and indicator filters for exploring dashboard data.</p>
+        </div>
 
-                <li><strong>Dynamic Data Table:</strong> Top 10 areas ranked by rate based on the selected indicator.</li>
+        <div class="feature-item">
+            <strong>Key Performance Indicators (KPIs)</strong>
+            <p>Overall adult rate, highest and lowest areas, and highest and lowest ethnic groups.</p>
+        </div>
 
-                <li><strong>Trend Analysis:</strong> Combined column and line charts for exploring health indicator patterns.</li>
+        <div class="feature-item">
+            <strong>Geographical Visualisation</strong>
+            <p>Shape Map displaying health indicator values across U.S. states.</p>
+        </div>
 
-                <li><strong>Comparative Visualisations:</strong> Bar and area charts for comparing health-related data.</li>
-            </ul>
-        </section>
+        <div class="feature-item">
+            <strong>Dynamic Data Table</strong>
+            <p>Top 10 areas ranked by rate based on the selected indicator.</p>
+        </div>
+
+        <div class="feature-item">
+            <strong>Trend Analysis</strong>
+            <p>Combined column and line charts for exploring health indicator patterns.</p>
+        </div>
+
+        <div class="feature-item">
+            <strong>Comparative Visualisations</strong>
+            <p>Bar and area charts for comparing health-related data.</p>
+        </div>
+
+    </div>
+</section>
+
 
 
     </main>
