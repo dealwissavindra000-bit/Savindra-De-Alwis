@@ -387,31 +387,45 @@ footer {
     }
 }
 
-        /* Hero Layout */
+       
+/* Hero Layout */
 
 .hero {
     padding: 90px 0 90px 40px;
     background: linear-gradient(135deg, #fff0e0 0%, #ffc183 40%, #e88732 100%);
     overflow: hidden;
 }
-        
+
 .hero-content {
     width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-        }
+    justify-content: space-between;
+    gap: 60px;
+}
 
-        .hero-text {
-            text-align: left;
-            flex: 1;
-            padding-left: 100px;
-        }
+.hero-text {
+    text-align: left;
+    flex: 1;
+    padding-left: 100px;
+}
 
-      .hero-text h1 {
-    font-size: 55px;
+/* Degree */
+
+.hero-text .hero-degree {
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #7a421e;
+    margin: 0 0 15px;
+}
+
+/* Name */
+
+.hero-text h1 {
+    font-size: 58px;
+    line-height: 1.15;
     margin: 0;
     color: #222222;
     position: relative;
@@ -420,18 +434,105 @@ footer {
 .hero-text h1::after {
     content: "";
     display: block;
-    width: 55px;
+    width: 65px;
     height: 4px;
     background: #e8751a;
-    margin-top: 12px;
+    margin-top: 18px;
     border-radius: 5px;
 }
 
-        .hero-text p {
-    font-size: 21px;
-    margin-top: 15px;
+/* Tagline */
+
+.hero-text .hero-tagline {
+    font-size: 23px;
+    margin-top: 22px;
     color: #222222;
     font-weight: 600;
+}
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 14px 25px;
+    background: #ffffff;
+    color: #222222;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 5px 15px rgba(80, 45, 15, 0.10);
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #fff7ef;
+    transform: translateY(-4px);
+    box-shadow: 0 9px 20px rgba(80, 45, 15, 0.16);
+}
+
+.button-arrow {
+    color: #e8751a;
+    font-size: 19px;
+    font-weight: 800;
+    transition: transform 0.3s ease;
+}
+
+.hero-button:hover .button-arrow {
+    transform: translateX(3px);
+}
+
+/* Hero introduction animations */
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-degree {
+    animation: heroFadeUp 0.8s ease-out 0.1s both;
+}
+
+.hero-name {
+    animation: heroFadeUp 0.8s ease-out 0.3s both;
+}
+
+.hero-tagline .tagline-word {
+    display: inline-block;
+    animation: heroFadeUp 0.7s ease-out both;
+}
+
+.hero-tagline .tagline-word:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.hero-tagline .tagline-word:nth-child(2) {
+    animation-delay: 0.7s;
+    color: #e8751a;
+}
+
+.hero-tagline .tagline-word:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.hero-buttons .hero-button {
+    animation: heroFadeUp 0.7s ease-out 1.1s both;
 }
 
     /* Hero introduction animations */
@@ -1045,15 +1146,17 @@ h2 {
 
 <body>
 
- <header class="hero">
+
+<header class="hero">
     <div class="hero-content">
 
         <div class="hero-text">
-            <h1 class="hero-name">Savindra De Alwis</h1>
 
             <p class="hero-degree">
-                Business Data Analytics Undergraduate
+                BUSINESS DATA ANALYTICS UNDERGRADUATE
             </p>
+
+            <h1 class="hero-name">Savindra De Alwis</h1>
 
             <p class="hero-tagline">
                 <span class="tagline-word">Learning.</span>
@@ -1061,24 +1164,29 @@ h2 {
                 <span class="tagline-word">Growing.</span>
             </p>
 
-            <a href="#about" class="hero-button">
-                Explore My Journey ↓
-            <a href="Savindra De Alwis - CV-.pdf"
-   target="_blank"
-   class="hero-button"
-   style="margin-left: 10px;">
-    View CV ↗
-</a>
+            <div class="hero-buttons">
+                <a href="#about" class="hero-button">
+                    Explore My Journey <span class="button-arrow">↓</span>
+                </a>
+
+                <a href="Savindra De Alwis - CV-.pdf"
+                   target="_blank"
+                   class="hero-button">
+                    View CV <span class="button-arrow">↗</span>
+                </a>
+            </div>
+
         </div>
 
-       <div class="data-visual">
-    <img src="WhatsApp Image 2026-11-03 at 1.11.03 PM.jpeg"
-         alt="Savindra De Alwis"
-         class="profile-photo">
-</div>
+        <div class="data-visual">
+            <img src="WhatsApp Image 2026-11-03 at 1.11.03 PM.jpeg"
+                 alt="Savindra De Alwis"
+                 class="profile-photo">
+        </div>
 
     </div>
 </header>
+
 
    <nav>
     <a href="#about">About</a>
